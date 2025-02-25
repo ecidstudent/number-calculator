@@ -16,6 +16,47 @@ let result = `Solving ${num1} ${operation} ${num2}`;
 
 // Implementation goes here
 // if you get an error, exit with an error of 1 by calling process.exit(1);
+if (isNaN(num1) || isNaN(num2)) {
+  console.error("invalid number");
+  process.exit(1);
+}
+
+if (operation === "add") {
+  result = add(num1, num2);
+}
+
+else if (operation === "subtract") {
+  result = subtract(num1, num2);
+}
+
+else if (operation === "divide") {
+  if (num2 === 0) {
+    console.error("invalid number");
+    process.exit(1);
+  }
+  result = divide(num1, num2);
+}
+
+else if (operation === "times" || operation === "multiply") {
+  result = times(num1, num2);
+}
+
+else if (operation === "power") {
+  result = power(num1, num2);
+}
+
+else if (operation === "modulus" || operation === "remainder") {
+  if (num2 === 0) {
+    console.error("invalid number");
+    process.exit(1);
+  }
+  result = modulus(num1, num2);
+}
+
+else {
+  console.error("unknown operation");
+  process.exit(1);
+}
 
 
 console.log("result: ", result);
