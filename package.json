@@ -30,7 +30,7 @@
   "author": "Echo Idenden",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ecidstudent/calculator.git"
+    "url": "git+https://github.com/ecidstudent/number-calculator"
   },
   "license": "MIT",
   "devDependencies": {
